@@ -110,14 +110,8 @@ export const sendTransaction = async (
           // call the server to save the transaction
           // console.log("calling server to save the transaction");
           setIsLoading(false);
-          // getAccountInfo(localStorage.getItem("ADDRESS"), setTotalBalance);
           let remainBalance =
             parseFloat(localStorage.getItem("BALANCE")) - amount;
-
-            console.log('SB',localStorage.getItem("BALANCE"))
-            console.log('PARB',parseFloat(localStorage.getItem("BALANCE")))
-
-          
           localStorage.setItem("BALANCE", remainBalance.toString());
           setTotalBalance(remainBalance.toString());
         }
