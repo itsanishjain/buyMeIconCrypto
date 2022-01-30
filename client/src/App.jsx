@@ -1,4 +1,4 @@
-import { Navbar, Welcome, Footer, Services, Transactions } from "./components";
+import { Navbar, Welcome, Footer, Services } from "./components";
 
 const App = () => (
   <div className="min-h-screen">
@@ -7,7 +7,7 @@ const App = () => (
       <Welcome />
     </div>
     <Services />
-    <Transactions />
+    {/* <Transactions /> */}
     <Footer />
   </div>
 );

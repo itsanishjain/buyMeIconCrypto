@@ -27,8 +27,7 @@ const Services = () => (
           continue to improve
         </h1>
         <p className="text-left my-2 text-white font-light md:w-9/12 w-11/12 text-base">
-          The best choice for buying and selling your crypto assets, with the
-          various super friendly services we offer
+          to create Best way for artists and creators to get sustainable income
         </p>
       </div>
 
@@ -39,17 +38,12 @@ const Services = () => (
           icon={<BsShieldFillCheck fontSize={21} className="text-white" />}
           subtitle="Security is guranteed. We always maintain privacy and maintain the quality of our products"
         />
-        <ServiceCard
-          color="bg-[#8945F8]"
-          title="Best exchange rates"
-          icon={<BiSearchAlt fontSize={21} className="text-white" />}
-          subtitle="Security is guranteed. We always maintain privacy and maintain the quality of our products"
-        />
+
         <ServiceCard
           color="bg-[#F84550]"
           title="Fastest transactions"
           icon={<RiHeart2Fill fontSize={21} className="text-white" />}
-          subtitle="Security is guranteed. We always maintain privacy and maintain the quality of our products"
+          subtitle="We use Icon Network for all transactions. We are always working on improving the speed of transactions"
         />
       </div>
     </div>
