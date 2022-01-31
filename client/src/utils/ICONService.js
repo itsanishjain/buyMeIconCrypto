@@ -67,7 +67,6 @@ export const connectWallet = (
 export const sendTransaction = async (
   addressTo,
   amount,
-  keyword,
   message,
   setIsLoading,
   setTotalBalance
@@ -84,7 +83,7 @@ export const sendTransaction = async (
       .nonce(IconService.IconConverter.toBigNumber(1))
       .version(IconService.IconConverter.toBigNumber(3))
       .timestamp(new Date().getTime() * 1000)
-      .data(IconService.IconConverter.fromUtf8(`${keyword}|${message}`))
+      .data(IconService.IconConverter.fromUtf8(`${message}`))
       .build();
 
     const transaction = {

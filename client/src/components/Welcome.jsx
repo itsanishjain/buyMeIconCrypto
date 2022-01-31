@@ -21,20 +21,17 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
   />
 );
 
-
-
 const Welcome = () => {
   const [isConnected, setIsConnected] = useState(false);
   const [currentAccount, setCurrentAccount] = useState(null);
   const [totalBalance, setTotalBalance] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [formData, setformData] = useState({ addressTo: "", amount: "", keyword: "", message: "" });
+  const [formData, setformData] = useState({ addressTo: "", amount: "", message: "" });
 
 
   useEffect(() => {
     setCurrentAccount(localStorage.getItem("ADDRESS"));
     setTotalBalance(localStorage.getItem("BALANCE"));
-    console.log("I RUNS AGAIN BABAY")
   }, []);
 
   const handleChange = (e, name) => {
@@ -42,14 +39,14 @@ const Welcome = () => {
   };
 
   const handleSubmit = (e) => {
-    const { addressTo, amount, keyword, message } = formData;
+    const { addressTo, amount, message } = formData;
     e.preventDefault();
-    if (!addressTo || !amount || !keyword || !message) {
+    if (!addressTo || !amount || !message) {
       notify("All fields are required")
       return;
     }
     setIsLoading(true)
-    sendTransaction(addressTo, amount, keyword, message, setIsLoading, setTotalBalance);
+    sendTransaction(addressTo, amount, message, setIsLoading, setTotalBalance);
     console.log("1ST RUn ALREADY RUNNE END HERE")
   };
 
@@ -121,7 +118,6 @@ const Welcome = () => {
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
             <Input placeholder="Amount (ICX)" name="amount" type="number" handleChange={handleChange} />
-            <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
             <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
 
             <div className="h-[1px] w-full bg-gray-400 my-2" />
