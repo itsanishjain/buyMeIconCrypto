@@ -49,7 +49,7 @@ const Welcome = () => {
       return;
     }
     setIsLoading(true)
-    sendTransaction(addressTo, amount, keyword, message,setIsLoading,setTotalBalance);
+    sendTransaction(addressTo, amount, keyword, message, setIsLoading, setTotalBalance);
     console.log("1ST RUn ALREADY RUNNE END HERE")
   };
 
@@ -107,6 +107,10 @@ const Welcome = () => {
                 </p>
                 <p className="text-white font-light text-sm">
                   {totalBalance && `${totalBalance} ICX`}
+                </p>
+                <br />
+                <p className="text-black font-bold text-sm">
+                  {currentAccount && <a href={`https://sejong.tracker.solidwallet.io/address/${currentAccount}`}>Your Transaction history visit <span className="text-white-500">here- </span></a>}
                 </p>
                 <p className="text-white font-semibold text-lg mt-1">
                   Icon
